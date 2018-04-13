@@ -39,7 +39,6 @@ function draw(e) {
     } else {
         ctx.lineWidth = 1;
     }
-
 }
 
 canvas.addEventListener('mousemove', draw);

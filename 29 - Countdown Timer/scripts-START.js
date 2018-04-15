@@ -1,5 +1,6 @@
 let countDown;
 const timerDisplay  = document.querySelector('.display__time-left');
+const displayEnd = document.querySelector('.display__end-time');
 
 const timer = (seconds) => {
   const now = Date.now();
@@ -24,4 +25,11 @@ const displayTimeLeft = (seconds) => {
   const display  = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
   document.title = display;
   timerDisplay.textContent = display;
+}
+
+const dispayEndTime = (timeStamp) => {
+  const end  = new Date(timeStamp);
+  const hours = end.getHours();
+  const minutes = end.getMinutes();
+  displayEnd.textContent = `BE BACK AT ${houors}:${minutes}`
 }

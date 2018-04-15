@@ -31,5 +31,6 @@ const dispayEndTime = (timeStamp) => {
   const end  = new Date(timeStamp);
   const hours = end.getHours();
   const minutes = end.getMinutes();
-  displayEnd.textContent = `BE BACK AT ${houors}:${minutes}`
+  const adjustedHour = hours > 12 ? hour - 12 : hour;
+  displayEnd.textContent = `BE BACK AT ${adjustedHour}:${minutes}`
 }

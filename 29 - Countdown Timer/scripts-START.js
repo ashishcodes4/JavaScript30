@@ -35,3 +35,7 @@ const dispayEndTime = (timeStamp) => {
   const adjustedHour = hour > 12 ? hour - 12 : hour;
   displayEnd.textContent = `BE BACK AT ${adjustedHour}:${minutes < 10 ? '0' : '' }${minutes}`;
 }
+
+const displayTime = (time) => {
+  return;
+}

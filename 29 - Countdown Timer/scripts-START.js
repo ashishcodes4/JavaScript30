@@ -6,6 +6,7 @@ const timer = (seconds) => {
   const now = Date.now();
   const then = now + seconds * 1000;
   displayTimeLeft(seconds);
+  dispayEndTime(then);
 
   countDown = setInterval(() => {
     //decide what the countDown will start with...
@@ -29,8 +30,8 @@ const displayTimeLeft = (seconds) => {
 
 const dispayEndTime = (timeStamp) => {
   const end  = new Date(timeStamp);
-  const hours = end.getHours();
+  const hour = end.getHours();
   const minutes = end.getMinutes();
-  const adjustedHour = hours > 12 ? hour - 12 : hour;
-  displayEnd.textContent = `BE BACK AT ${adjustedHour}:${minutes}`
+  const adjustedHour = hour > 12 ? hour - 12 : hour;
+  displayEnd.textContent = `BE BACK AT ${adjustedHour}:${minutes < 10 ? '0' : '' }${minutes}`;
 }

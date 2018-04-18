@@ -12,7 +12,9 @@ function debounce(func, wait = 500, immediate = true) {
       if (callNow) func.apply(context, args);
     };
   }
-
+window.addEventListener('click', (data)=> {
+  console.log(data);
+});
 
 const imageSlider = document.querySelectorAll('.slide-in');
 
